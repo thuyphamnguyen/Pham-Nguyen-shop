@@ -1,0 +1,35 @@
+
+/* === Blog Style === */
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.blog-item {
+  width: calc(33% - 20px);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+}
+
+.blog-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.blog-item h2 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+.blog-item p {
+  font-size: 0.95rem;
+  color: #555;
+}

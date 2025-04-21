@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Thú Cưng</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Blog Chăm Sóc Thú Cưng</h1>
+
+  <div class="blog-list">
+    <div class="blog-item">
+      <img src="images/blog1.png" alt="Chăm sóc chó con">
+      <h2><a href="blog1.html">Cách chăm sóc chó con trong 6 tháng đầu</a></h2>
+      <p>Chó con cần được tiêm phòng, ăn uống đúng cách và huấn luyện nhẹ nhàng trong giai đoạn đầu đời...</p>
+    </div>
+
+    <div class="blog-item">
+      <img src="images/blog2.webp" alt="Tắm cho mèo">
+      <h2><a href="blog2.html">5 bước để tắm cho mèo không bị cào</a></h2>
+      <p>Mèo thường không thích nước, nhưng nếu bạn làm đúng cách, việc tắm cho mèo sẽ trở nên nhẹ nhàng hơn...</p>
+    </div>
+
+    <div class="blog-item">
+      <img src="images/blog3.jpg" alt="Thức ăn tốt cho thú cưng">
+      <h2><a href="blog3.html">Thức ăn nào tốt cho thú cưng nhà bạn?</a></h2>
+      <p>Không phải loại thức ăn nào cũng phù hợp với mọi loại thú cưng. Cùng tìm hiểu các lựa chọn phổ biến hiện nay...</p>
+    </div>
+  </div>
+
+<!-- Floating Zalo & Facebook -->
+<style>
+.floating-contact {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.floating-contact a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #007aff;
+  color: white;
+  font-size: 26px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+.floating-contact a.zalo { background-color: #00c300; }
+.floating-contact a:hover { transform: scale(1.1); }
+</style>
+<div class="floating-contact">
+  <a href="https://zalo.me/0396836295" class="zalo" title="Liên hệ Zalo" target="_blank">Z</a>
+  <a href="https://www.facebook.com/share/16LfghBM2F/" class="facebook" title="Liên hệ Facebook" target="_blank">f</a>
+</div>
+
+
+<!-- Messenger Plugin chat Code -->
+<div id="fb-root"></div>
+<div id="fb-customer-chat" class="fb-customerchat"></div>
+<script>
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "Thuyspaphamnguyen");
+  chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+<!-- Facebook SDK -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v18.0'
+    });
+  };
+
+  (function(d, s, id){
+    if (d.getElementById(id)) return;
+    var js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
+    var fjs = d.getElementsByTagName(s)[0];
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<!-- Form phản hồi nhanh -->
+<section style="padding: 40px; background: #f9f9f9; border-top: 1px solid #ddd;">
+  <h2 style="text-align:center;">Phản hồi nhanh</h2>
+  <form action="https://formspree.io/f/xvoejlkl" method="POST" style="max-width: 500px; margin: auto;">
+    <label for="name">Họ tên</label>
+    <input type="text" name="name" required style="width:100%; padding:10px; margin:8px 0;">
+
+    <label for="email">Email</label>
+    <input type="email" name="email" required style="width:100%; padding:10px; margin:8px 0;">
+
+    <label for="message">Nội dung</label>
+    <textarea name="message" rows="5" required style="width:100%; padding:10px; margin:8px 0;"></textarea>
+
+    <button type="submit" style="padding:10px 20px; background:#007aff; color:white; border:none; cursor:pointer;">Gửi</button>
+  </form>
+</section>
+
+</body>
+</html>
